@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather app</title>
   </head>
   <body>
@@ -23,14 +24,15 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <h1>Philadelphia</h1>
-              <h3 class="current-temp">64°F | C</h3>
+              <h1 id="city"></h1>
+              <h3 class="current-temp"><span id="temp"></span> °F</h3>
+
               <ul>
-                <li>Fri, May 14th 9:28pm</li>
-                <li>Clear skies</li>
-                <li>Feels like 60°F</li>
-                <li>Humidity 73%</li>
-                <li>Wind 2 km/h</li>
+                <li id="date">Fri, May 14th 9:28pm</li>
+                <li id="description"></li>
+                <li>Feels like <span id="feels-like"></span></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind-speed"></span> km/h</li>
               </ul>
             </div>
             <div class="col">

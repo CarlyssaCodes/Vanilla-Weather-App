@@ -17,6 +17,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+#description {
+  text-transform: capitalize;
+}
 .weather-app-wrapper {
   margin: auto;
   width: 60%;
