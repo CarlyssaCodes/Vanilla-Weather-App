@@ -1,3 +1,23 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let currentTime = date.toLocaleString(undefined, {
+    minute: "2-digit",
+    hour: "2-digit",
+  });
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${currentTime}`;
+}
+
 function showWeather(response) {
   let cityElement = (document.querySelector("#city").innerHTML =
     response.data.name);
@@ -19,10 +39,16 @@ function showWeather(response) {
   let windElement = (document.querySelector(
     "#wind-speed"
   ).innerHTML = Math.round(response.data.wind.speed));
-  console.log(response.data);
+
+  let dateElememnt = (document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  ));
+
+  console.log(response);
 }
 
 let apiKey = "80791a0ef9679c89428b222ffd6823ff";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&appid=${apiKey}&units=imperial`;
+let city = "Philadelphia";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(showWeather);
