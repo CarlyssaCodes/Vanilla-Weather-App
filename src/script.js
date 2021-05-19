@@ -44,7 +44,12 @@ function showWeather(response) {
     response.data.dt * 1000
   ));
 
-  console.log(response);
+  let iconElement = document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 let apiKey = "80791a0ef9679c89428b222ffd6823ff";
