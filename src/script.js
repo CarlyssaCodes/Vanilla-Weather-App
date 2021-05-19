@@ -52,8 +52,19 @@ function showWeather(response) {
     );
 }
 
-let apiKey = "80791a0ef9679c89428b222ffd6823ff";
-let city = "Philadelphia";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+function search(city) {
+  let apiKey = "80791a0ef9679c89428b222ffd6823ff";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showWeather);
+}
 
-axios.get(apiUrl).then(showWeather);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
