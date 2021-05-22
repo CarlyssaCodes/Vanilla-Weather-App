@@ -17,6 +17,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+}
 #description {
   text-transform: capitalize;
 }
@@ -31,4 +35,9 @@ ul {
   border-radius: 10px;
   padding: 20px;
   margin-top: 64px;
+}
+
+.weather-app .active {
+  color: black;
+  cursor: default;
 }
