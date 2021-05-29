@@ -1,10 +1,14 @@
 h1 {
   font-family: "Anton", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  color: #34495e;
+  padding: 0;
+  margin: 0;
 }
 h3 {
   font-family: "Anton", sans-serif;
-  font-size: 40px;
+  font-size: 50px;
+  color: #22313f;
 }
 li {
   font-family: "Montserrat", sans-serif;
@@ -16,6 +20,7 @@ ul {
   font-size: 12px;
   margin: 0;
   padding: 0;
+  color: #22313f;
 }
 
 a {
@@ -51,6 +56,25 @@ a {
 }
 
 .weather-forecast-date {
-  color: blue;
+  color: #34495e;
   font-size: 16px;
+}
+.weather-forecast-temp-max {
+  color: #22313f;
+}
+
+.weather-forecast-temp-min {
+  color: #8dc6ff;
+}
+
+.units {
+  color: #22313f;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.current-weather-icon {
+  padding: 14px;
+  margin: 15px;
+  width: 200px;
+  height: auto;
 }
