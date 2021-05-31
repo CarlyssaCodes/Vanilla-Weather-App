@@ -9,6 +9,7 @@ h3 {
   font-family: "Anton", sans-serif;
   font-size: 50px;
   color: #22313f;
+  margin-bottom: 10px;
 }
 li {
   font-family: "Montserrat", sans-serif;
@@ -29,15 +30,35 @@ a {
 #description {
   text-transform: capitalize;
 }
+.city-form {
+  font-family: "Montserrat";
+  color: #22313f;
+  width: 450px;
+  border: none;
+  line-height: 30px;
+}
+.btn {
+  font-family: "Montserrat";
+  color: #34495e;
+  border: 1px solid #e4f1fe;
+  background: #e4f1fe;
+  border-radius: 4px;
+  position: relative;
+  top: 1px;
+  left: 150px;
+}
+
 .weather-app-wrapper {
-  margin: auto;
-  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
   padding: 10px;
 }
 
 .weather-app {
-  border: 1px solid #000000;
+  border: 1px solid #22313f;
   border-radius: 10px;
+  box-shadow: 10px -6px 10px 1px rgba(141, 198, 255, 0.2);
   padding: 20px;
   margin-top: 64px;
 }
@@ -70,7 +91,9 @@ a {
 .units {
   color: #22313f;
   font-size: 30px;
-  font-weight: lighter;
+  position: relative;
+  top: -20px;
+  left: -4px;
 }
 .current-weather-icon {
   padding: 14px;
